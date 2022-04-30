@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30517.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payment.Test.Tuya.Models", "Payment.Test.Tuya.Models\Payment.Test.Tuya.Models.csproj", "{123C4B63-F782-499F-9A6A-DC4143B25E75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payment.Test.Tuya.BL", "Payment.Test.Tuya.BL\Payment.Test.Tuya.BL.csproj", "{729DDD7F-BAAD-4A6F-8AA0-6FB661FBA5DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payment.Test.Tuya.DAL", "Payment.Test.Tuya.DAL\Payment.Test.Tuya.DAL.csproj", "{654D90C4-4516-4036-AC70-B179B44479E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payment.Test.Tuya.API", "Payment.Test.Tuya.API\Payment.Test.Tuya.API.csproj", "{EF25A231-A30E-4066-8737-DF0B8FE5BC51}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{123C4B63-F782-499F-9A6A-DC4143B25E75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{123C4B63-F782-499F-9A6A-DC4143B25E75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{123C4B63-F782-499F-9A6A-DC4143B25E75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{123C4B63-F782-499F-9A6A-DC4143B25E75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{729DDD7F-BAAD-4A6F-8AA0-6FB661FBA5DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{729DDD7F-BAAD-4A6F-8AA0-6FB661FBA5DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{729DDD7F-BAAD-4A6F-8AA0-6FB661FBA5DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{729DDD7F-BAAD-4A6F-8AA0-6FB661FBA5DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{654D90C4-4516-4036-AC70-B179B44479E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{654D90C4-4516-4036-AC70-B179B44479E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{654D90C4-4516-4036-AC70-B179B44479E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{654D90C4-4516-4036-AC70-B179B44479E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF25A231-A30E-4066-8737-DF0B8FE5BC51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF25A231-A30E-4066-8737-DF0B8FE5BC51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF25A231-A30E-4066-8737-DF0B8FE5BC51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF25A231-A30E-4066-8737-DF0B8FE5BC51}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {745E943D-636B-4A65-B3C7-5C9B0E2613D7}
+	EndGlobalSection
+EndGlobal
