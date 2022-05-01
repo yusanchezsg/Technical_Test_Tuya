@@ -4,4 +4,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Payment.Test.Tuya.DAL\Payment.Test.Tuya.DAL.csproj" />
+    <ProjectReference Include="..\Payment.Test.Tuya.Models\Payment.Test.Tuya.Models.csproj" />
+  </ItemGroup>
+
 </Project>

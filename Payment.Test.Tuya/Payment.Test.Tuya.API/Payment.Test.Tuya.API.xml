@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Payment.Test.Tuya.API</name>
+    </assembly>
+    <members>
+        <member name="M:Payment.Test.Tuya.API.Controllers.PaymentController.Get">
+            <summary>
+            Get Products
+            </summary>
+            <returns>Products</returns>
+        </member>
+        <member name="M:Payment.Test.Tuya.API.Controllers.ProductsController.Get">
+            <summary>
+            Get Products
+            </summary>
+            <returns>Products</returns>
+        </member>
+        <member name="M:Payment.Test.Tuya.API.Controllers.ProductsController.Create(Payment.Test.Tuya.Models.Products)">
+            <summary>
+            
+            </summary>
+            <param name="product"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Payment.Test.Tuya.API.Extension.StartupConfiguration.GeneralConfigurations(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Method to add general configuration
+            </summary>
+            <param name="services">IServiceCollection</param>
+        </member>
+    </members>
+</doc>
