@@ -27,6 +27,8 @@ namespace Payment.Test.Tuya.DAL.Generic
             }
         }
 
+        public ApplicationContext Context => throw new System.NotImplementedException();
+
         public void Dispose()
         {
             _context.Dispose();
