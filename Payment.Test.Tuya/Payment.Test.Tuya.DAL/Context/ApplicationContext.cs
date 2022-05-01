@@ -1,8 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Payment.Test.Tuya.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Payment.Test.Tuya.DAL.Context
 {

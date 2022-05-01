@@ -6,13 +6,13 @@ namespace Payment.Test.Tuya.DAL.Generic
     public class UnitOfWork<T> : IUnitOfWork<T> where T : class
     {
 
-        public ApplicationContext _context { get; }
+        public ApplicationContext context { get; }
 
-        public GenericRepositoryDAL<T> repository;
+        private GenericRepositoryDAL<T> repository;
 
-        public UnitOfWork(ApplicationContext context)
+        public UnitOfWork(ApplicationContext _context)
         {
-            _context = context;
+            context = _context;
         }
 
         public GenericRepositoryDAL<T> GenericRepositoryDAL
@@ -21,22 +21,20 @@ namespace Payment.Test.Tuya.DAL.Generic
             {
                 if(this.repository==null)
                 {
-                    this.repository = new GenericRepositoryDAL<T>(_context);
+                    this.repository = new GenericRepositoryDAL<T>(context);
                 }
                 return this.repository;
             }
-        }
-
-        public ApplicationContext Context => throw new System.NotImplementedException();
+        }        
 
         public void Dispose()
         {
-            _context.Dispose();
+            context.Dispose();
         }
 
         public void Save()
         {
-            _context.SaveChanges();
+            context.SaveChanges();
         }
     }
 }

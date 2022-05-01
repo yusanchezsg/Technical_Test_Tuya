@@ -15,6 +15,7 @@ namespace Payment.Test.Tuya.BL.Generic
 
         public Model Create(Model entity)
         {
+            _unitOfWork.GenericRepositoryDAL.Create(entity);
             _unitOfWork.Save();
             return entity;
         }

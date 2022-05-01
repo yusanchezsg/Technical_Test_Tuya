@@ -46,6 +46,7 @@ namespace Payment.Test.Tuya.API
             services.AddSingleton<IGeneralConfigurations>(gc =>
                gc.GetRequiredService<IOptions<GeneralConfigurations>>().Value);
 
+            services.AddServices();
             services.AddRazorPages();
             services.GeneralConfigurations();
 
@@ -73,7 +74,7 @@ namespace Payment.Test.Tuya.API
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
+            app.UseAuthentication();
             app.UseRouting();
             app.UseAuthorization();
 

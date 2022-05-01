@@ -1,26 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net.Mime;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using Payment.Test.Tuya.BL.ProductsBL;
 using Payment.Test.Tuya.Models;
-using Serilog;
+
 
 namespace Payment.Test.Tuya.API.Controllers
 {
-   
+
     [Route("api/products")]
     public class ProductsController : Controller
     {
 
         private readonly IProductsServiceBL _productsServiceBl;
 
-
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="productsServiceBL"></param>
         public ProductsController(IProductsServiceBL productsServiceBL)
         {
             _productsServiceBl = productsServiceBL;
@@ -39,21 +38,30 @@ namespace Payment.Test.Tuya.API.Controllers
 
 
         /// <summary>
-        /// 
+        /// Create Product
         /// </summary>
         /// <param name="product"></param>
         /// <returns></returns>
-        [HttpPost]
-        [Authorize]
+        [HttpPost]        
         [Consumes(MediaTypeNames.Application.Json)]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public IActionResult Create([FromBody] Products product)
         {
-            Log.Information("Creating new product", product);
-            var productCreated = _productsServiceBl.Create(product);
-            return CreatedAtAction(nameof(Get), new { id = productCreated.ProductId });
-
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    var productCreated = _productsServiceBl.Create(product);
+                    return CreatedAtAction(nameof(Get), new { id = productCreated.ProductId });
+                }
+                return BadRequest();
+                
+            }
+            catch (Exception ex)
+            {
+                return BadRequest();
+            }
         }
     }
 }

@@ -6,7 +6,8 @@ namespace Payment.Test.Tuya.DAL.Interfaces
 {
     public interface IUnitOfWork<T> : IDisposable where T : class
     {
-        ApplicationContext Context { get; }
+        ApplicationContext context { get; }
+
         GenericRepositoryDAL<T> GenericRepositoryDAL { get; }
 
         void Save();

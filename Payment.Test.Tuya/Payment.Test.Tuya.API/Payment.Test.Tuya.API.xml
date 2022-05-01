@@ -4,6 +4,12 @@
         <name>Payment.Test.Tuya.API</name>
     </assembly>
     <members>
+        <member name="M:Payment.Test.Tuya.API.Controllers.PaymentController.Get">
+            <summary>
+            Get Products
+            </summary>
+            <returns>Products</returns>
+        </member>
         <member name="M:Payment.Test.Tuya.API.Controllers.ProductsController.Get">
             <summary>
             Get Products
